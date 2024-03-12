@@ -2,39 +2,11 @@ import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
 import app from "../firebase/firebase.config";
-
+import GoogleLogo from "/images/GoogleLogo.png";
 
 const title = "Login";
 const socialTitle = "Login With Social Media";
 const btnText = "Submit Now";
-
-const socialList = [
-  {
-    link: "#",
-    iconName: "icofont-github",
-    className: "github",
-  },
-  {
-    link: "#",
-    iconName: "icofont-facebook",
-    className: "facebook",
-  },
-  {
-    link: "#",
-    iconName: "icofont-twitter",
-    className: "twitter",
-  },
-  {
-    link: "#",
-    iconName: "icofont-linkedin",
-    className: "linkedin",
-  },
-  {
-    link: "#",
-    iconName: "icofont-instagram",
-    className: "instagram",
-  },
-];
 
 const Login = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -136,29 +108,10 @@ const Login = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onClick={handleRegister} className="github">
-                    <i className="icofont-github"></i>
+                  <button onClick={handleRegister} className="googleLogin flex">
+                    <img src={GoogleLogo} alt="logo" className="w-[50px] googleicon"/>
+                    <p className="llllrl">Sing with Google</p>
                   </button>
-                </li>
-                <li>
-                  <a href="/" className="facebook">
-                    <i className="icofont-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="twitter">
-                    <i className="icofont-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="linkedin">
-                    <i className="icofont-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="instagram">
-                    <i className="icofont-instagram"></i>
-                  </a>
                 </li>
               </ul>
             </div>

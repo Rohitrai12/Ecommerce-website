@@ -9610,6 +9610,44 @@ footer.style-2 .footer-top.dark-view * {
     color: #ff5700;
 }
 
+.lab-ul.social-icons.justify-content-center {
+    margin: 0 auto;
+    width: 150px;
+    background-color: transparent !important;
+  }
+  
+  .googleLogin {
+    background-color: #fff;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    border: 2px solid #f1602698;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #f0f0f0;;
+  }
+  
+  .googleLogin:hover {
+    background-color: #ffffff;
+  }
+  
+  .llllrl {
+    flex-wrap: nowrap;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    align-items: center;
+    margin-top: 7px;
+  }
+  
+  .googleicon {
+    margin-right: 10px;
+    width: 50px;
+  }
+  
 
 @media(max-width: 892px) {
     .btnt {
