@@ -8,6 +8,34 @@ const title = "Register Now";
 const socialTitle = "Register With Social Media";
 const btnText = "Get Started Now";
 
+let socialList = [
+  {
+    link: "#",
+    iconName: "icofont-facebook",
+    className: "facebook",
+  },
+  {
+    link: "#",
+    iconName: "icofont-twitter",
+    className: "twitter",
+  },
+  {
+    link: "#",
+    iconName: "icofont-linkedin",
+    className: "linkedin",
+  },
+  {
+    link: "#",
+    iconName: "icofont-instagram",
+    className: "instagram",
+  },
+  {
+    link: "#",
+    iconName: "icofont-pinterest",
+    className: "pinterest",
+  },
+];
+
 const Signup = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -38,9 +66,7 @@ const Signup = () => {
 
     if (password !== confirmPassword) {
       // Passwords do not match, set an error message
-      setErrorMessage(
-        "Passwords doesn't match! Please provide correct password"
-      );
+      setErrorMessage("Passwords doesn't match! Please provide correct password");
     } else {
       // Passwords match, proceed with signup logic
       setErrorMessage(""); // Clear the error message
@@ -48,14 +74,14 @@ const Signup = () => {
         .then((userCredential) => {
           // Signed in successfully
           const user = userCredential.user;
-          alert("Account Created Successfully!");
+          alert("Account Created Successfully!")
           navigate(from, { replace: true });
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           console.log(errorMessage);
-          alert(`${errorMessage}`);
+          alert(`${errorMessage}`)
         });
     }
   };
@@ -107,13 +133,8 @@ const Signup = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onClick={handleRegister} className="googleLogin flex">
-                    <img
-                      src={GoogleLogo}
-                      alt="logo"
-                      className="w-[50px] googleicon"
-                    />
-                    <p className="llllrl">Sing with Google</p>
+                  <button onClick={handleRegister} className="bgbbg">
+                    <img src={GoogleLogo} alt="" width="400px" className="lgogdoogl"/>
                   </button>
                 </li>
               </ul>

@@ -9609,7 +9609,7 @@ footer.style-2 .footer-top.dark-view * {
 .name {
     color: #ff5700;
 }
-
+/* 
 .lab-ul.social-icons.justify-content-center {
     margin: 0 auto;
     width: 150px;
@@ -9646,8 +9646,20 @@ footer.style-2 .footer-top.dark-view * {
   .googleicon {
     margin-right: 10px;
     width: 50px;
-  }
+  } */
   
+
+  .lgogdoogl{
+    width: 60px !important;
+    height: 67px !important;
+  }
+
+  .bgbbg{
+    background-color: #f6d324d0 !important;
+    border-radius: 100px;
+  }
+
+
 
 @media(max-width: 892px) {
     .btnt {
