@@ -28,7 +28,6 @@ const SingleProduct = () => {
 
   const result = product.filter((p) => p.id === id);
   return (
-    
     <div>
       <PageHeader title={"OUR SHOP SINGLE"} curPage={"Shop / Single Product"} />
       <div className="shop-single padding-tb aside-bg">
