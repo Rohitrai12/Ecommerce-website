@@ -9,7 +9,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 
-// import required modules
 import { Autoplay } from "swiper/modules";
 import Review from "../../components/Review";
 import MostPopularPost from "../../components/Sidebar/MostPopularPost";
