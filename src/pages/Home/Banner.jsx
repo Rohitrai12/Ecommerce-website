@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import SelectCategory from "../Shop/SelectCategory";
-import productData from "../../products.json";
+import productData from "/public/products.json";
 import { Link } from "react-router-dom";
 
 const title = (
