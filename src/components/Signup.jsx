@@ -1,19 +1,50 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
-import GoogleLogo from "/images/GoogleLogo.png"; // Assuming correct path to GoogleLogo image
 
 const title = "Register Now";
 const socialTitle = "Register With Social Media";
 const btnText = "Get Started Now";
 
+let socialList = [
+  {
+    link: "#",
+    iconName: "icofont-facebook",
+    className: "facebook",
+  },
+  {
+    link: "#",
+    iconName: "icofont-twitter",
+    className: "twitter",
+  },
+  {
+    link: "#",
+    iconName: "icofont-linkedin",
+    className: "linkedin",
+  },
+  {
+    link: "#",
+    iconName: "icofont-instagram",
+    className: "instagram",
+  },
+  {
+    link: "#",
+    iconName: "icofont-pinterest",
+    className: "pinterest",
+  },
+];
+
 const Signup = () => {
   const [errorMessage, setErrorMessage] = useState("");
+
   const { signUpWithGmail, createUser } = useContext(AuthContext);
+
   const location = useLocation();
   const navigate = useNavigate();
+
   const from = location.state?.from?.pathname || "/";
 
+  // login with google
   const handleRegister = () => {
     signUpWithGmail()
       .then((result) => {
@@ -23,31 +54,35 @@ const Signup = () => {
       .catch((error) => console.log(error));
   };
 
+  // login with email password
   const handleSignup = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    const confirmPassword = form.confirmPassword.value;
+    const confirmPassword = form.confirmPassword.value; // Get the confirm password field
 
     if (password !== confirmPassword) {
-      setErrorMessage("Passwords don't match! Please provide correct password");
+      // Passwords do not match, set an error message
+      setErrorMessage("Passwords doesn't match! Please provide correct password");
     } else {
-      setErrorMessage("");
+      // Passwords match, proceed with signup logic
+      setErrorMessage(""); // Clear the error message
       createUser(email, password)
         .then((userCredential) => {
+          // Signed in successfully
           const user = userCredential.user;
-          alert("Account Created Successfully!");
+          alert("Account Created Successfully!")
           navigate(from, { replace: true });
         })
         .catch((error) => {
+          const errorCode = error.code;
           const errorMessage = error.message;
           console.log(errorMessage);
-          alert(errorMessage);
+          alert(`${errorMessage}`)
         });
     }
   };
-
   return (
     <div>
       <div className="login-section padding-tb section-bg">
@@ -71,6 +106,7 @@ const Signup = () => {
                   placeholder="Confirm Password"
                 />
               </div>
+              {/* showing error message */}
               <div>
                 {errorMessage && (
                   <div className="error-message text-danger">
@@ -79,7 +115,7 @@ const Signup = () => {
                 )}
               </div>
               <div className="form-group">
-                <button className="lab-btn" type="submit">
+                <button className="lab-btn">
                   <span>{btnText}</span>
                 </button>
               </div>
@@ -91,17 +127,33 @@ const Signup = () => {
               <span className="or">
                 <span>or</span>
               </span>
+
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onclick={handleRegister()} className="googleLogin flex">
-                    <img
-                      src={GoogleLogo}
-                      alt="logo"
-                      className="w-[50px] googleicon"
-                    />
-                    <p className="llllrl">Sign with Google</p>
+                  <button onClick={handleRegister} className="github">
+                    <i className="icofont-github"></i>
                   </button>
+                </li>
+                <li>
+                  <a href="/" className="facebook">
+                    <i className="icofont-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="twitter">
+                    <i className="icofont-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="linkedin">
+                    <i className="icofont-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="instagram">
+                    <i className="icofont-instagram"></i>
+                  </a>
                 </li>
               </ul>
             </div>

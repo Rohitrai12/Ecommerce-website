@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../contexts/AuthProvider";
-import GoogleLogo from "/images/GoogleLogo.png";
 
 const title = "Login";
 const socialTitle = "Login With Social Media";
@@ -135,14 +134,29 @@ const Login = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onclick={handleRegister()} className="googleLogin flex">
-                    <img
-                      src={GoogleLogo}
-                      alt="logo"
-                      className="w-[50px] googleicon"
-                    />
-                    <p className="llllrl">Sign with Google</p>
+                  <button onClick={handleRegister} className="github">
+                    <i className="icofont-github"></i>
                   </button>
+                </li>
+                <li>
+                  <a href="/" className="facebook">
+                    <i className="icofont-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="twitter">
+                    <i className="icofont-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="linkedin">
+                    <i className="icofont-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="/" className="instagram">
+                    <i className="icofont-instagram"></i>
+                  </a>
                 </li>
               </ul>
             </div>
