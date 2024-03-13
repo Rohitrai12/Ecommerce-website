@@ -65,11 +65,17 @@ const Signup = () => {
                 <input type="password" name="password" placeholder="Password" />
               </div>
               <div className="form-group">
-                <input type="password" name="confirmPassword" placeholder="Confirm Password" />
+                <input
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confirm Password"
+                />
               </div>
               <div>
                 {errorMessage && (
-                  <div className="error-message text-danger">{errorMessage}</div>
+                  <div className="error-message text-danger">
+                    {errorMessage}
+                  </div>
                 )}
               </div>
               <div className="form-group">
@@ -88,8 +94,13 @@ const Signup = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onClick={handleRegister} className="bgbbg">
-                    <img src={GoogleLogo} alt="Google Logo" className="lgogdoogl" />
+                  <button onclick={handleRegister()} className="googleLogin flex">
+                    <img
+                      src={GoogleLogo}
+                      alt="logo"
+                      className="w-[50px] googleicon"
+                    />
+                    <p className="llllrl">Sign with Google</p>
                   </button>
                 </li>
               </ul>

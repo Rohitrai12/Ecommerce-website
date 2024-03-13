@@ -9609,7 +9609,6 @@ footer.style-2 .footer-top.dark-view * {
 .name {
     color: #ff5700;
 }
-/* 
 .lab-ul.social-icons.justify-content-center {
     margin: 0 auto;
     width: 150px;
@@ -9623,15 +9622,15 @@ footer.style-2 .footer-top.dark-view * {
     align-items: center;
     gap: 10px;
     border-radius: 30px;
-    border: 2px solid #f1602698;
+    border: 2px solid #e4e4e4;
     padding: 5px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
-    background-color: #f0f0f0;;
+    align-items: center;
   }
   
   .googleLogin:hover {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
   }
   
   .llllrl {
@@ -9639,26 +9638,16 @@ footer.style-2 .footer-top.dark-view * {
     color: #333;
     font-weight: bold;
     font-size: 16px;
-    align-items: center;
-    margin-top: 7px;
+    margin-left: 0px;
+    margin-top: 11px;
   }
   
   .googleicon {
     margin-right: 10px;
     width: 50px;
-  } */
+  }
   
-
-  .lgogdoogl{
-    width: 60px !important;
-    height: 67px !important;
-  }
-
-  .bgbbg{
-    background-color: #f6d324d0 !important;
-    border-radius: 100px;
-  }
-
+    
 
 
 @media(max-width: 892px) {

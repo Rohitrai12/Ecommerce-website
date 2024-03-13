@@ -135,13 +135,13 @@ const Login = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onClick={handleRegister} className="bgbbg">
+                  <button onclick={handleRegister()} className="googleLogin flex">
                     <img
                       src={GoogleLogo}
-                      alt=""
-                      width="400px"
-                      className="lgogdoogl"
-                    />{" "}
+                      alt="logo"
+                      className="w-[50px] googleicon"
+                    />
+                    <p className="llllrl">Sign with Google</p>
                   </button>
                 </li>
               </ul>
