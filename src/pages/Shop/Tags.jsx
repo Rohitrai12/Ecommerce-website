@@ -50,7 +50,7 @@ const Tags = () => {
             </div>
             <ul className="widget-wrapper">
                 {tagsList.map((val, i) => (
-                    <Link to={'/blog'}>
+                    <Link to={'/blog'} key={i}>
                     <li key={i}><a href={val.link}>{val.text}</a></li>
                     </Link>
                 ))}

@@ -4975,7 +4975,8 @@ button {
 @media(max-width: 575px) {
     .banner-section.style-4 .banner-content form {
         border-radius: 0px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
+        display: none;
     }
 }
 
@@ -4989,7 +4990,9 @@ button {
 @media(max-width: 575px) {
     .banner-section.style-4 .banner-content form select {
         width: 100%;
-        border-bottom: 1px solid #ecf0f3
+        border-bottom: 1px solid #ecf0f3;
+        display: none !important;
+        
     }
 }
 
@@ -5040,6 +5043,7 @@ button {
     background-color: #ffde40bf;
     color: white !important;
     font-weight: 600;
+    
 }
 
 .banner-section.style-4 .banner-content ul li i {
